@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js'
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js'
+import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js'
+import { OrbitControls } from '/node_modules/three/examples/jsm/controls/OrbitControls.js'
 
 // init
 
@@ -15,9 +15,11 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 // controls
+
 const controls = new OrbitControls( camera, renderer.domElement ); 
 
 // lights
+
 const ambient = new THREE.PointLight(0xFFFFFF, 1);
 ambient.position.set(0, 100, 10);
 scene.add(ambient);
@@ -27,6 +29,7 @@ ambient2.position.set(10, 0, 100);
 scene.add(ambient2);
 
 //load gltf file
+
 var loader = new GLTFLoader();				
 	loader.load( './assets/thisisbowie2.gltf', function ( gltf ) {
 	var object = gltf.scene;				
@@ -38,16 +41,12 @@ var loader = new GLTFLoader();
 	
 	scene.add( gltf.scene );
     animate();
-    // renderer.render( scene, camera);
 	});	 
 
 function animate() {
 
     requestAnimationFrame( animate );
-    
-    // required if controls.enableDamping or controls.autoRotate are set to true
     controls.update();
-    
     renderer.render( scene, camera );
     
     }
