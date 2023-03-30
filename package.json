@@ -1,0 +1,13 @@
+{
+    "name": "bowie",
+    "version": "1.0.0",
+    "scripts": {
+        "run": "python -m http.server"
+    },
+    "type": "module",
+    "dependencies": {
+        "three": "^0.150.1",
+        "three-gltf-loader": "^1.111.0",
+        "three.js": "^0.77.0"
+    }
+}
