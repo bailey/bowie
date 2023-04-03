@@ -7,3 +7,11 @@ footer {
     bottom: 10px;
     right: 10px;
 }
+
+img {
+    opacity: 0.5;
+  }
+  
+  img:hover {
+    opacity: 1.0;
+  }
